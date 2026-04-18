@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McDonald's | I'm Lovin' It</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #292929;
+            background-color: #ffffff;
+        }
+
+        /* Navbar */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 8%;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: #FFBC0D; /* McDonald's Gold */
+            font-family: "Arial Black", sans-serif;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #292929;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #DA291C;
+        }
+
+        .order-btn {
+            background: #DA291C; /* McDonald's Red */
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .order-btn:hover {
+            background: #bd2318;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 70vh;
+            background: #FFBC0D;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            color: #292929;
+            letter-spacing: -1px;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .cta-btn {
+            background: #292929;
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+
+        .cta-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Featured Items Section */
+        .featured-items {
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .featured-items h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .card {
+            border: 1px solid #f0f0f0;
+            padding: 30px;
+            border-radius: 12px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            background: #fff;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .placeholder-img {
+            height: 180px;
+            background: #f8f8f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #ccc;
+            font-size: 1.2rem;
+            border: 2px dashed #eee;
+        }
+
+        .card h3 {
+            margin: 15px 0 10px 0;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            background: #292929;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            color: #FFBC0D;
+            margin-bottom: 10px;
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .hero { height: 50vh; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">M</div>
+            <ul class="nav-links">
+                <li><a href="#">Our Menu</a></li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+            <button class="order-btn">Order Now</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>The Classics You Love.</h1>
+            <p>Hot, fresh, and delivered right to your door.</p>
+            <button class="cta-btn">View Full Menu</button>
+        </div>
+    </section>
+
+    <section class="featured-items">
+        <h2>Fan Favorites</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="placeholder-img">Big Mac Image</div>
+                <h3>Big Mac®</h3>
+                <p>The iconic double-decker burger with special sauce, lettuce, cheese, pickles, and onions.</p>
+            </div>
+            <div class="card">
+                <div class="placeholder-img">Fries Image</div>
+                <h3>World Famous Fries®</h3>
+                <p>Golden, crispy, and perfectly salted. The legend that goes with everything.</p>
+            </div>
+            <div class="card">
+                <div class="placeholder-img">McNuggets Image</div>
+                <h3>Chicken McNuggets®</h3>
+                <p>Tender, juicy, and ready for dipping in your favorite sauce. Available in 6, 10, or 20 piece.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">M</div>
+        <p class="copyright">&copy; 2026 McDonald's Recreation. All rights reserved.</p>
+    </footer>
+</body>
+</html>
